@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import json
-from bnbtutorial.items import BnbtutorialItem
+import logging
 
-QUERY = 'Lucca--Italy'
+from ..items import BnbtutorialItem
+
+QUERY = 'Seattle--WA'
 
 # class BnbspiderSpider(scrapy.Spider):
 class BnbSpider(scrapy.Spider):
@@ -25,7 +27,6 @@ class BnbSpider(scrapy.Spider):
                                     callback=self.parse_listing_results_page)
 
 
-
     def parse_listing_results_page(self, response):
         room_url_parts = set(response.xpath('//div/a[contains(@href,"rooms")]/@href').extract())
         for href in list(room_url_parts):
@@ -40,21 +41,6 @@ class BnbSpider(scrapy.Spider):
         if json_array:
             airbnb_json_all = json.loads(json_array[0])
             airbnb_json = airbnb_json_all['airEventData']
-            item['rev_count'] = airbnb_json['visible_review_count']
-            item['amenities'] = airbnb_json['amenities']
-            item['room_type'] = airbnb_json['room_type']
-            item['price'] = airbnb_json['price']
-            item['bed_type'] = airbnb_json['bed_type']
-            item['person_capacity'] = airbnb_json['person_capacity']
-            item['cancel_policy'] = airbnb_json['cancel_policy']
-            item['rating_communication'] = airbnb_json['communication_rating']
-            item['rating_cleanliness'] = airbnb_json['cleanliness_rating']
-            item['rating_checkin'] = airbnb_json['checkin_rating']
-            item['satisfaction_guest'] = airbnb_json['guest_satisfaction_overall']
-            item['instant_book'] = airbnb_json['instant_book_possible']
-            item['accuracy_rating'] = airbnb_json['accuracy_rating']
-            item['response_time'] = airbnb_json['response_time_shown']
-            item['response_rate'] = airbnb_json['response_rate_shown']
         item['url'] = response.url
         yield item
 
@@ -80,4 +66,3 @@ class BnbSpider(scrapy.Spider):
             # otherwise we can conclude that the page
             # has results but that there is only one page.
                 return 1
-
