@@ -64,6 +64,7 @@ def main():
         while link != False:
             email_url.extend(get_links(driver, str(link)))
             link = find_next(driver, link)
+    print len(email_url)
     for email in email_url:
         driver.get(email)
         # subject = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtSubject')

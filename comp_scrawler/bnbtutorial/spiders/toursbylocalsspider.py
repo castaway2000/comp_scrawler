@@ -1,6 +1,3 @@
-import re
-import os
-import optparse
 from selenium import webdriver
 
 
@@ -13,8 +10,6 @@ def main():
            'Yokohama-Tour-Guides', 'Osaka-Tour-Guides', 'Kyoto-Tour-Guides']
     #TODO: add napal, myanmar, sri lanka, columbia, serbia, madagascar, montenegro, canada,
     #TODO: mongolia, south africa, zambia, egypt to the list.
-
-    collection = []
 
     options = webdriver.ChromeOptions()
     options.binary_location = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
