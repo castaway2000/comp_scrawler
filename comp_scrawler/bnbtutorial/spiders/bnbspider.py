@@ -5,8 +5,13 @@ import logging
 
 from ..items import BnbtutorialItem
 
-QUERY = 'Seattle--WA'
-KEYWORDS = 'https://www.yelp.com/search?find_desc=tours&find_loc=Seattle%2C+WA&ns=1'
+TODO = 'Portland--OR--United-States', 'Honolulu--HI--United-States', \
+       'New-Orleans--LA--United-States', 'Bangkok-Thailand', 'Phuket-Thailand', 'Chiang-Mai-Thailand',\
+       'Pattaya-Chon-Buri-Thailand', 'London--United-Kingdom', 'Bath--United-Kingdom', 'Paris--France', \
+       'Versailles--France', 'Dubai', 'Singapore', 'Kualalumpur-Malaysia', 'Istanbul--Turkey', 'Tokyo--Japan',\
+       'Kamakura--Kanagawa-Prefecture--Japan', 'Osaka--Osaka-Prefecture--Japan', 'Seoul--South-Korea'
+
+QUERY = 'Chicago--IL--United-States'
 
 # class BnbspiderSpider(scrapy.Spider):
 class BnbSpider(scrapy.Spider):
