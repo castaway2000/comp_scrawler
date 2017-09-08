@@ -5,13 +5,11 @@ import logging
 
 from ..items import BnbtutorialItem
 
-TODO = 'Portland--OR--United-States', 'Honolulu--HI--United-States', \
-       'New-Orleans--LA--United-States', 'Bangkok-Thailand', 'Phuket-Thailand', 'Chiang-Mai-Thailand',\
-       'Pattaya-Chon-Buri-Thailand', 'London--United-Kingdom', 'Bath--United-Kingdom', 'Paris--France', \
+TODO = 'London--United-Kingdom', 'Bath--United-Kingdom', 'Paris--France', \
        'Versailles--France', 'Dubai', 'Singapore', 'Kualalumpur-Malaysia', 'Istanbul--Turkey', 'Tokyo--Japan',\
        'Kamakura--Kanagawa-Prefecture--Japan', 'Osaka--Osaka-Prefecture--Japan', 'Seoul--South-Korea'
 
-QUERY = 'Chicago--IL--United-States'
+QUERY = 'Pattaya-Chon-Buri-Thailand'
 
 # class BnbspiderSpider(scrapy.Spider):
 class BnbSpider(scrapy.Spider):
