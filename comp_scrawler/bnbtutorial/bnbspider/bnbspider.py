@@ -3,7 +3,7 @@ import scrapy
 import json
 import logging
 
-from ..items import BnbtutorialItem
+from comp_scrawler.bnbtutorial.items import BnbtutorialItem
 
 
 QUERY = 'Seoul--South-Korea'
