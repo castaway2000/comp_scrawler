@@ -5,9 +5,8 @@ import logging
 
 from ..items import BnbtutorialItem
 
-TODO = 'Seoul--South-Korea'
 
-QUERY = 'Osaka--Osaka-Prefecture--Japan'
+QUERY = 'Seoul--South-Korea'
 
 # class BnbspiderSpider(scrapy.Spider):
 class BnbSpider(scrapy.Spider):
