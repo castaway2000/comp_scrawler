@@ -5,6 +5,15 @@ from selenium.common import exceptions
 import time
 
 
+def is_previously_messaged(profile, writer=False):
+    with open('contacted_on_triip.txt', 'rw') as doc:
+        if profile in doc.readlines():
+            return False
+        if writer:
+            doc.write(str(profile))
+    return True
+
+
 def get_links(driver, link):
     """
     This is the part where we get the tourguides listings as links
@@ -23,11 +32,26 @@ def get_links(driver, link):
         return False
 
 
-# def message(driver):
-#     body = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtMessage')
-#     body.send_keys('put something here.')
-#     button = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_lnkSend')
-#     button.click()
+def message(driver, listing):
+    msg = 'Hello, my name is Adam. I am reaching out to you because of your passion for showing tourists around. ' \
+          'I hope you are doing well, If you have a moment I have a proposal. ' \
+          'Last year I started tourzan.com with the idea that a city is best seen with a local. ' \
+          'Its goal is to add value to what you are already doing, my goal is to help increase customers for you ' \
+          'My respect for businesses and individual entrepreneurial types like yourself is great.' \
+          'I would be honored if you would give my webservice a chance and a look over. ' \
+          'let me know what you think. im not here to steal you from Triip. ' \
+          'I am here to an additional place to list and increase your presence on the internet. \n\n' \
+          'Thank you for your time \n' \
+          'Adam Szablya'
+    driver.get(listing)
+    msg_btn = driver.find_element_by_xpath("//a[contains(@class,'contact-creator-full-button hidden-xs hidden-sm visible-md-block visible-lg-block js-top-message-button')]")
+    msg_btn.click()
+    body = driver.find_element_by_xpath("//textarea[contains(@class, 'input_required required_field_empty js-message-input')]")
+    body.send_keys(msg)
+    button = driver.find_element_by_id('msg_login_btn')
+    # button.click()
+    is_previously_messaged(listing, writer=True)
+
 
 def customers(driver, listing_url):
     """
@@ -72,6 +96,21 @@ def customers(driver, listing_url):
         f.write("%s\n" % item)
     return users
 
+
+def market(driver, users):
+    """
+    gets the first listing of each unique user and messages the user.
+    :param driver: 
+    :param users: 
+    :return: 
+    """
+    for user in users:
+        if is_previously_messaged(user):
+            driver.get(user)
+            listing = driver.find_element_by_class_name("tour-thumb").get_attribute('href')
+            message(driver, listing)
+
+
 def main():
     """
     crawls over Triip.com for all listings and unique users.
@@ -100,9 +139,12 @@ def main():
     # f = open('triiplistings.txt', 'w')
     # for item in listing_url:
     #     f.write("%s\n" % item)
-    with open('triiplistings.txt', 'r') as f:
-        listing_url = f.readlines()
-    customers(driver, listing_url)
+    # with open('triiplistings.txt', 'r') as f:
+    #     listing_url = f.readlines()
+    # customers(driver, listing_url)
+    with open('triipusers.txt', 'r') as f:
+        user_url = f.readlines
+    market(driver, user_url)
 
 
 if __name__ == "__main__":

@@ -64,12 +64,23 @@ def main():
         while link != False:
             email_url.extend(get_links(driver, str(link)))
             link = find_next(driver, link)
+    msg = 'Hello, my name is Adam. I am reaching out to you because of your passion for showing tourists around. ' \
+          'I hope you are doing well, If you have a moment I have a proposal. ' \
+          'Last year I started tourzan.com with the idea that a city is best seen with a local. ' \
+          'Its goal is to add value to what you are already doing, my goal is to help increase customers for you ' \
+          'My respect for businesses and individual entrepreneurial types like yourself is great.' \
+          'I would be honored if you would give my webservice a chance and a look over. ' \
+          'let me know what you think. im not here to steal you from meetrip. ' \
+          'I am here to an additional place to list and increase your presence on the internet. \n\n' \
+          'Thank you for your time \n' \
+          'Adam Szablya'
     for email in email_url:
         driver.get(email)
+        #TODO: match this with the right elements
         # subject = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtSubject')
         # subject.send_keys('Tourzan.com')
         # body = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtMessage')
-        # body.send_keys('put something here.')
+        # body.send_keys(msg)
         # button = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_lnkSend')
         # button.click()
 

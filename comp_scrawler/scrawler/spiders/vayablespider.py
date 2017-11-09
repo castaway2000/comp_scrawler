@@ -5,6 +5,15 @@ from selenium import webdriver
 from selenium.common import exceptions
 
 
+def is_previously_messaged(profile, writer=False):
+    with open('contacted_on_vayable.txt', 'rw') as doc:
+        if profile in doc.readlines():
+            return False
+        if writer:
+            doc.write(str(profile))
+    return True
+
+
 def get_links(driver, links):
     email_url = []
     driver.get(links)
@@ -41,6 +50,7 @@ def main():
            'Japan': {'Tokyo': ['Tokyo'], 'Kanagawa': ['Kamakura'], 'Osaka': ['Osaka']},
            'Korea': {'Seoul': ['Seoul']}
            }
+    #TODO: make this work with vayable
     #TODO: add napal, myanmar, sri lanka, columbia, serbia, madagascar, montenegro, canada,
     #TODO: mongolia, south africa, zambia, egypt to the list.
     #TODO: login https://tourguides.viator.com
@@ -64,14 +74,27 @@ def main():
         while link != False:
             email_url.extend(get_links(driver, str(link)))
             link = find_next(driver, link)
+
+    message = 'Hello, my name is Adam. I am reaching out to you because of your passion for showing tourists around. ' \
+              'I hope you are doing well, If you have a moment I have a proposal. ' \
+              'Last year I started tourzan.com with the idea that a city is best seen with a local. ' \
+              'Its goal is to add value to what you are already doing, my goal is to help increase customers for you ' \
+              'My respect for businesses and individual entrepreneurial types like yourself is great.' \
+              'I would be honored if you would give my webservice a chance and a look over. ' \
+              'let me know what you think. im not here to steal you from Vayable. ' \
+              'I am here to an additional place to list and increase your presence on the internet. \n\n' \
+              'Thank you for your time \n' \
+              'Adam Szablya'
     for email in email_url:
-        driver.get(email)
-        # subject = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtSubject')
-        # subject.send_keys('Tourzan.com')
-        # body = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtMessage')
-        # body.send_keys('put something here.')
-        # button = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_lnkSend')
-        # button.click()
+        if is_previously_messaged(email):
+        #     driver.get(email)
+        #     subject = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtSubject')
+        #     subject.send_keys('Tourzan.com')
+        #     body = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_txtMessage')
+        #     body.send_keys(message)
+        #     button = driver.find_element_by_id('ctl00_ctl00_plcMain_ContentPlaceHolder_Body_lnkSend')
+            # button.click()
+            is_previously_messaged(email, writer=True)
 
 
 if __name__ == "__main__":
