@@ -56,6 +56,7 @@ def main():
            'Malaysia':{'Kuala+Lumpur': ['Kuala+Lumpur']},
            'Turkey': {'Istanbul': ['Istanbul']},
            'Japan': {'Tokyo': ['Tokyo'], 'Kamakura': ['Kamakura'], 'Osaka': ['Osaka'], 'Nara': ['Nara']},
+
            # TODO: add more ares below this line till target reaches 1000
            'Chile': {'Santiago': 'Santiago'},
            'Peru': {'Lima': ['Lima']},
@@ -64,7 +65,7 @@ def main():
            'Italy': {'Rome': ['Rome'], 'Venice': ['Venice']},
            'Greece': {'Athens': ['Athens']},
            'Egypt': {'Cairo': ['Cairo'], 'Luxor': ['Luxor']},
-           'Korea': {'Seoul': ['Seoul']}
+           'Korea': {'Seoul': ['Seoul']},
            }
 
     #TODO: add napal, myanmar, sri lanka, columbia, serbia, madagascar, montenegro, canada,

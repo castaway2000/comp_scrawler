@@ -333,7 +333,6 @@ https://www.yelp.com/biz/genius-loci-tours-san-francisco?osq=Tour+Guide
 https://www.yelp.com/adredir?ad_business_id=Uf00lK8xF9-I1hWmHaedUw&campaign_id=fIGJP4ctXnERP0HI6Vwkag&click_origin=search_results&placement=below_search&redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Ffrisco-limo-san-francisco-2&request_id=2ebe73952de6888b&signature=b923f0f17d5370b2910533c25ccb453f6954865425eba4d15558cb300e0012b9&slot=0
 https://www.yelp.com/biz/city-clues-adventures-san-francisco?osq=Tour+Guide
 https://www.yelp.com/biz/whole-brew-world-oakland?osq=Tour+Guide
-https://www.yelp.com/biz/flash-sport-fishing-charters-san-francisco-2?osq=Tour+Guide
 https://www.yelp.com/adredir?ad_business_id=Se_QTs0GdG7KNEt5jSlriQ&campaign_id=rGJ_dHpGiZ6co0dypJTWTw&click_origin=search_results&placement=below_search&redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Ffive-emerald-limousine-san-francisco-4&request_id=0bf79a4315c25b57&signature=eb62472f4297e97d9508ab637a2054fdb6911d613162187df9b9228ae5daaf6c&slot=0
 https://www.yelp.com/adredir?ad_business_id=BVbORzwDsHSVtTKDgtQ0jQ&campaign_id=JITn-FJFj3gax7wKElCNKg&click_origin=search_results&placement=above_search&redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Fsan-francisco-excursions-san-francisco&request_id=3ddce00025c71bcd&signature=fa7514f42c571ebb1404458a1b53b7d87eb0602592a90f5627b792b7d856638a&slot=1
 https://www.yelp.com/biz/san-francisco-journeys-san-francisco?osq=Tour+Guide
@@ -402,7 +401,6 @@ https://www.yelp.com/biz/oregon-peak-adventures-portland?osq=Tour+Guide
 https://www.yelp.com/biz/the-vine-travelers-vancouver?osq=Tour+Guide
 https://www.yelp.com/biz/river-drifters-white-salmon-2?osq=Tour+Guide
 https://www.yelp.com/adredir?ad_business_id=GYONAgm27bJUIBUZPuIcfA&campaign_id=jdEIZa2dDyh4j1PZbgAgoA&click_origin=search_results&placement=above_search&redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Fa-town-car-2-pdx-west-linn-3&request_id=d7c5b1ea0a37b4ab&signature=1a704db17097704e1c41c1bbc20615174590bb45e485f72aa9ae3f5d06f5e676&slot=0
-https://www.yelp.com/adredir?ad_business_id=MgPbFjdTZUo9L_fziqKB4g&campaign_id=ve9xanTUVVhFQwGKeCcWoA&click_origin=search_results&placement=above_search&redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Fsun-buggy-and-atv-fun-rentals-las-vegas&request_id=d0b1484ee49acbf0&signature=addf7ac682b5cf2831839790bac69b32e4aeeeed9f8e40023a87a8743223a200&slot=0
 https://www.yelp.com/biz/grand-adventures-tours-las-vegas?osq=Tour+Guide
 https://www.yelp.com/biz/maverick-helicopters-las-vegas-2?osq=Tour+Guide
 https://www.yelp.com/biz/zappos-tour-experience-las-vegas?osq=Tour+Guide
