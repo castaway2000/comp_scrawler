@@ -127,7 +127,7 @@ def main():
 
     driver.get('https://tourguides.viator.com/Member/Login.aspx')
     driver.find_element_by_id('ctl00_plcMain_TextBox_Email').send_keys('contactus@tourzan.com')
-    driver.find_element_by_id('ctl00_plcMain_TextBox_Password').send_keys('blaze2000')
+    driver.find_element_by_id('ctl00_plcMain_TextBox_Password').send_keys('password')
     driver.find_element_by_name('ctl00$plcMain$Button_Login').click()
     driver.implicitly_wait(5)
     for email in email_url:
