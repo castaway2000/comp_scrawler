@@ -1,9 +1,7 @@
 # comp_scrawler
-tourzan competition crawler
+Comp Scrawler is a marketing web crawler that spiders and automates normally manual tasks on websites.
+The code is open sourced for educational purposes. The use of this script is at your own risk and liability.
 
+Partially based on the [Scrappy Airbnb tutorial](http://www.verginer.eu/blog/web-scraping-airbnb/) and my own selenium scripting.
 
-#Based on the Airbnb Scrapy Tutorial
-A tutorial on how to write a scrapy spider to get data from Airbnb.
-If you are looking for the original post follows [this link](http://www.verginer.eu/blog/web-scraping-airbnb/).
-
-TODO: more Airbnb locations, vayable, yelp, showaround, meetrip, gopackup
+Any companies on the targeted list that wish to contact me can do so at contactus@tourzan.com with the subject "comp_scrawler target <company name>" I am willing to discuss opportunities of partnerships, job offers, information redaction, etc.
