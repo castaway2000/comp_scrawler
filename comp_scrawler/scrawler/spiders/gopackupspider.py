@@ -41,10 +41,10 @@ def login_driver(driver):
     login = 'https://gopackup.com/login'
     driver.get(login)
     driver.find_element_by_name('email').send_keys('contactus@tourzan.com')
-    driver.find_element_by_name('password').send_keys('blaze2000')
+    driver.find_element_by_name('password').send_keys('')
     #
     # driver.execute_script("document.getElementsByName('email')[0].setAttribute('value', 'contactus@tourzan.com');")
-    # driver.execute_script("document.getElementsByName('password')[0].setAttribute('value', 'blaze2000');")
+    # driver.execute_script("document.getElementsByName('password')[0].setAttribute('value', '');")
     driver.find_element_by_id('go-btn-secondary').click()
 
 
