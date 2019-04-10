@@ -8,9 +8,12 @@ from selenium import webdriver
 
 def get_driver(proxy):
     options = webdriver.ChromeOptions()
-    options.binary_location = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
-    options.add_argument('window-size=800x841')
-    options.add_argument('headless')
+    #options.binary_location = '/usr/bin/chromedriver' # '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
+    options.add_argument('--window-size=800x841')
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-gpu')
     options.add_argument('--proxy-server=%s' % proxy)
     return webdriver.Chrome(chrome_options=options)
 
@@ -26,7 +29,7 @@ def get_proxy():
 
 def time_gen(type='large'):
     if type == "small":
-        return randint(60, 300)
+        return randint(15, 60)
     else:
         return randint(2100, 3900)
 
